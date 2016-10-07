@@ -5,6 +5,7 @@ class MyWindow(QtGui.QMainWindow) :
 	def __init__(self):
 		super(MyWindow, self).__init__()
 		self.ui = uic.loadUi('servidor.ui', self)
+		self.actualiza_tabla()
 		self.timer  = QtCore.QTimer(self)
 		self.timer.setInterval(1000)          
 		self.timer.timeout.connect(self.actualiza_tabla)
